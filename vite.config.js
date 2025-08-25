@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { VitePWA } from 'vite-plugin-pwa'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   plugins: [
@@ -11,21 +11,24 @@ export default defineConfig({
         name: "GoodLife Center - Entrenamiento",
         short_name: "GoodLife",
         description: "Aplicación para reservar clases y gestionar tu entrenamiento",
-        start_url: "/",
+        // Aquí se corrige la ruta de inicio
+        start_url: "/PruebaAppGimanaxio/", 
         display: "standalone",
         background_color: "#0066cc",
         theme_color: "#0066cc",
         orientation: "portrait",
-        scope: "/",
+        scope: "/PruebaAppGimanaxio/", // Y aquí también
         icons: [
           {
-            src: "/icon-192.png",
+            // Y aquí en el src de los íconos
+            src: "/PruebaAppGimanaxio/icon-192.png",
             sizes: "192x192",
             type: "image/png",
             purpose: "any maskable"
           },
           {
-            src: "/icon-512.png",
+            // Y aquí
+            src: "/PruebaAppGimanaxio/icon-512.png",
             sizes: "512x512",
             type: "image/png",
             purpose: "any maskable"
@@ -36,5 +39,6 @@ export default defineConfig({
   ],
   base: '/PruebaAppGimanaxio/',
   build: {
-  outDir: 'docs' }// Esta es la línea que debes agregar
-})
+    outDir: 'docs'
+  }
+});
