@@ -8,26 +8,24 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
+        // Asegúrate de que todas estas rutas tengan el nombre de tu repositorio
         name: "GoodLife Center - Entrenamiento",
         short_name: "GoodLife",
         description: "Aplicación para reservar clases y gestionar tu entrenamiento",
-        // Aquí se corrige la ruta de inicio
-        start_url: "/PruebaAppGimanaxio/", 
+        start_url: "/PruebaAppGimanaxio/",
         display: "standalone",
         background_color: "#0066cc",
         theme_color: "#0066cc",
         orientation: "portrait",
-        scope: "/PruebaAppGimanaxio/", // Y aquí también
+        scope: "/PruebaAppGimanaxio/",
         icons: [
           {
-            // Y aquí en el src de los íconos
             src: "/PruebaAppGimanaxio/icon-192.png",
             sizes: "192x192",
             type: "image/png",
             purpose: "any maskable"
           },
           {
-            // Y aquí
             src: "/PruebaAppGimanaxio/icon-512.png",
             sizes: "512x512",
             type: "image/png",
