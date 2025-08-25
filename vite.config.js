@@ -33,5 +33,6 @@ export default defineConfig({
         ]
       }
     })
-  ]
+  ],
+  base: '/PruebaAppGimanaxio/' // Esta es la línea que debes agregar
 })
