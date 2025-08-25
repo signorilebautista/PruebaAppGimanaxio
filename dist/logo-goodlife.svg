@@ -1,0 +1,64 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="neon">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fondo transparente -->
+  
+  <!-- Letra G que forma una kettlebell -->
+  <path d="M 80 60 
+           A 40 40 0 0 1 120 20 
+           L 120 40 
+           A 20 20 0 0 0 100 60 
+           L 80 60 
+           Z" 
+        fill="#87CEEB" 
+        stroke="#FFFFFF" 
+        stroke-width="1"
+        filter="url(#neon)"/>
+  
+  <!-- Asa de la kettlebell -->
+  <path d="M 120 20 
+           L 140 20 
+           A 10 10 0 0 1 140 40 
+           L 120 40 
+           Z" 
+        fill="#87CEEB" 
+        stroke="#FFFFFF" 
+        stroke-width="1"
+        filter="url(#neon)"/>
+  
+  <!-- Mancuerna dentro de la G -->
+  <g transform="translate(85, 35)">
+    <!-- Barra central -->
+    <rect x="0" y="0" width="25" height="6" rx="3" fill="#808080"/>
+    <!-- Pesas en los extremos -->
+    <circle cx="3" cy="3" r="4" fill="#808080"/>
+    <circle cx="22" cy="3" r="4" fill="#808080"/>
+    <!-- Detalles de las pesas -->
+    <path d="M 1 1 A 2 2 0 0 1 5 1 A 2 2 0 0 1 1 1" fill="#A0A0A0"/>
+    <path d="M 20 1 A 2 2 0 0 1 24 1 A 2 2 0 0 1 20 1" fill="#A0A0A0"/>
+  </g>
+  
+  <!-- Texto "GOODLIFE" en arco izquierdo -->
+  <path id="arcLeft" d="M 60 120 A 60 60 0 0 1 120 120" fill="none"/>
+  <text font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#87CEEB" stroke="#FFFFFF" stroke-width="0.5">
+    <textPath href="#arcLeft" startOffset="50%">
+      GOODLIFE
+    </textPath>
+  </text>
+  
+  <!-- Texto "CENTER" en arco derecho -->
+  <path id="arcRight" d="M 120 120 A 60 60 0 0 1 180 120" fill="none"/>
+  <text font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#87CEEB" stroke="#FFFFFF" stroke-width="0.5">
+    <textPath href="#arcRight" startOffset="50%">
+      CENTER
+    </textPath>
+  </text>
+</svg>
