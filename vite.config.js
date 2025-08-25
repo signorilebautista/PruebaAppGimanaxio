@@ -34,5 +34,7 @@ export default defineConfig({
       }
     })
   ],
-  base: '/PruebaAppGimanaxio/' // Esta es la línea que debes agregar
+  base: '/PruebaAppGimanaxio/',
+  build: {
+  outDir: 'docs' }// Esta es la línea que debes agregar
 })
