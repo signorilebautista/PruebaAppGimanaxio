@@ -1,0 +1,279 @@
+/* Estilos para la página de login */
+.dni-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fondo de la imagen del gimnasio */
+.dni-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/background-gym.jpg.JPG') center center / cover no-repeat;
+  filter: blur(8px);
+  z-index: 1;
+}
+
+/* Efecto de iluminación LED en el techo */
+
+/* Sección del header con el logo */
+.header-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 3;
+}
+
+/* Contenedor del logo */
+.logo-container {
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: relative;
+}
+
+/* Logo imagen */
+.logo-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 30px 35px rgba(0, 0, 0, 0.6));
+}
+
+@keyframes logoGlow {
+  0% {
+    filter: drop-shadow(0 0 15px rgba(135, 206, 235, 0.6));
+  }
+  100% {
+    filter: drop-shadow(0 0 25px rgba(135, 206, 235, 1));
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Texto de bienvenida */
+.welcome-text {
+  text-align: center;
+  color: white;
+}
+
+.welcome-text h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.instruction-box {
+  background: rgba(0, 102, 204, 0.9);
+  padding: 1rem 1.5rem;
+  border-radius: 15px 15px 15px 0;
+  margin: 0 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.instruction-box p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Sección del formulario */
+.form-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 3;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* Contenedor del input */
+.input-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dni-input {
+  width: 200px;
+  padding: 0.8rem 1.2rem;
+  background: rgba(95, 95, 95, 0.378);
+  border: none;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.dni-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dni-input:focus {
+  outline: none;
+  background: rgba(128, 128, 128, 0.3);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Botón de ingreso */
+.login-button {
+  width: 100%;
+  max-width: 150px;
+  padding: 0.6rem 1.2rem;
+  background: #0066cc;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 102, 204, 0.4);
+}
+
+.login-button:hover {
+  background: #0052a3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 102, 204, 0.6);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+
+
+
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .header-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .welcome-text h1 {
+    font-size: 1.3rem;
+  }
+  
+  .instruction-box {
+    padding: 0.6rem 1rem;
+    margin: 0 0.5rem;
+  }
+  
+  .instruction-box p {
+    font-size: 0.75rem;
+  }
+  
+  .good-text {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  
+  .life-center-text {
+    font-size: 0.9rem;
+  }
+  
+  .kettlebell-g {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .g-letter {
+    font-size: 1.8rem;
+  }
+  
+  .dumbbell-inside {
+    width: 14px;
+    height: 5px;
+  }
+  
+  .dumbbell-inside::before,
+  .dumbbell-inside::after {
+    width: 4px;
+    height: 4px;
+  }
+  
+  .form-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .dni-input {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .login-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dni-page {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.logo {
+  animation: fadeIn 1s ease-out 0.2s both;
+}
+
+.welcome-text {
+  animation: fadeIn 1s ease-out 0.4s both;
+}
+
+.login-form {
+  animation: fadeIn 1s ease-out 0.6s both;
+}

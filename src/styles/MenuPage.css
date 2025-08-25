@@ -1,0 +1,321 @@
+/* Estilos para la página del menú principal */
+.menu-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+}
+
+.header h1 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo container (reutilizando estilos del DniPage) */
+.logo-container {
+  margin-bottom: 0.8rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  position: relative;
+}
+
+/* Logo principal */
+.logo-main {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.good-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #87CEEB;
+  text-shadow: 
+    0 0 10px rgba(135, 206, 235, 0.8),
+    0 0 20px rgba(135, 206, 235, 0.6);
+  letter-spacing: 1.5px;
+  margin-bottom: 0.2rem;
+  position: relative;
+}
+
+.good-text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+  animation: shimmer 2s infinite;
+}
+
+.life-center-text {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #87CEEB;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Icono de kettlebell con G */
+.logo-icon {
+  position: absolute;
+  top: -6px;
+  right: -12px;
+  z-index: 1;
+}
+
+.kettlebell-g {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.g-letter {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #87CEEB;
+  text-shadow: 
+    0 0 10px rgba(135, 206, 235, 0.8),
+    0 0 20px rgba(135, 206, 235, 0.6);
+  position: relative;
+  z-index: 2;
+}
+
+.dumbbell-inside {
+  position: absolute;
+  width: 14px;
+  height: 5px;
+  background: #808080;
+  border-radius: 3px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.dumbbell-inside::before,
+.dumbbell-inside::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #808080;
+  border-radius: 50%;
+  top: 0.5px;
+}
+
+.dumbbell-inside::before {
+  left: -2px;
+}
+
+.dumbbell-inside::after {
+  right: -2px;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Grid del menú */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+/* Opciones del menú */
+.menu-option {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu-option:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.menu-option:active {
+  transform: translateY(-2px);
+}
+
+.option-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.menu-option h3 {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.menu-option p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Botón de cerrar sesión */
+.logout-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  margin-top: auto;
+}
+
+.logout-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.logout-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .menu-page {
+    padding: 0.8rem;
+  }
+  
+  .header {
+    margin-bottom: 1.5rem;
+    padding: 0.8rem 0;
+  }
+  
+  .header h1 {
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
+  }
+  
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .menu-option {
+    padding: 1rem 0.8rem;
+  }
+  
+  .option-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .menu-option h3 {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .menu-option p {
+    font-size: 0.7rem;
+  }
+  
+  .logout-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .good-text {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+  
+  .life-center-text {
+    font-size: 0.8rem;
+  }
+  
+  .kettlebell-g {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .g-letter {
+    font-size: 1.6rem;
+  }
+  
+  .dumbbell-inside {
+    width: 12px;
+    height: 4px;
+  }
+  
+  .dumbbell-inside::before,
+  .dumbbell-inside::after {
+    width: 3px;
+    height: 3px;
+  }
+}
+
+/* Animaciones */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-option {
+  animation: slideInUp 0.6s ease-out both;
+}
+
+.menu-option:nth-child(1) { animation-delay: 0.1s; }
+.menu-option:nth-child(2) { animation-delay: 0.2s; }
+.menu-option:nth-child(3) { animation-delay: 0.3s; }
+.menu-option:nth-child(4) { animation-delay: 0.4s; }
+
+.logout-button {
+  animation: slideInUp 0.6s ease-out 0.5s both;
+}
